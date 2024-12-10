@@ -7,7 +7,7 @@
 
 #-- Import Libraries ---------------------------------------------------------
 import tensorflow as tf
-from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications import VGG19
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     batch_size = 32
 
     # Load the pre-trained ResNet50 model without the top layer
-    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=input_shape)
+    base_model = VGG19(weights='imagenet', include_top=False, input_shape=input_shape)
 
     # Freeze the convolutional base
     for layer in base_model.layers:
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     )
 
     # Save the trained model
-    model.save(f"./models/chest_xray_model_resnet50.h5")
+    model.save(f"./models/chest_xray_model_VGG19.h5")
 
     # Evaluate the model
     test_loss, test_accuracy = model.evaluate(test_generator)
