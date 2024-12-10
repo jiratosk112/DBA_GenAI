@@ -84,7 +84,7 @@ if __name__ == "__main__":
         steps_per_epoch=train_generator.samples // batch_size,
         validation_data=val_generator,
         validation_steps=val_generator.samples // batch_size,
-        epochs=1
+        epochs=10
     )
 
     # Fine-tune the model

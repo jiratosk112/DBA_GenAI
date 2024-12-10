@@ -69,17 +69,21 @@ def evaluate_model(model_path):
 # Main function
 #----------------------------------------------------------------------------- 
 if __name__ == "__main__":
-    #-- Evaluate ResNet50 --
-    resnet50 = config.MODELS_ROOT+config.RESNET50
-    evaluate_model(resnet50)
-    
-    #-- Evaluate CNN --
+#-- Evaluate CNN --
     # cnn = config.MODELS_ROOT+config.CNN
     # evaluate_model(cnn)
     
     #-- Evaluate VGG19 --
     # vgg19 = config.MODELS_ROOT+config.VGG19
     # evaluate_model(vgg19)
+
+    #-- Evaluate ResNet50 --
+    resnet50 = config.MODELS_ROOT+config.RESNET50
+    evaluate_model(resnet50)
+
+    #-- Evaluate ResNet50V2 --
+    resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
+    evaluate_model(resnet50V2)
         
 #-- End of if __name__ -------------------------------------------------------
 
