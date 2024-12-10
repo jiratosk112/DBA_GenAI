@@ -1,5 +1,5 @@
 #*****************************************************************************
-# Filename: dba861_jirat_boomuang_evaluate_models.py
+# Filename: jirat_evaluate_models.py
 # Author: Jirat Boomuang
 # Email: jirat_boomuang@sloan.mit.edu
 # Description: For evaluating trained models of pneumonia detection
@@ -78,9 +78,8 @@ if __name__ == "__main__":
     # evaluate_model(cnn)
     
     #-- Evaluate VGG19 --
-    vgg19 = config.MODELS_ROOT+config.VGG19
-    evaluate_model(vgg19)
-
+    # vgg19 = config.MODELS_ROOT+config.VGG19
+    # evaluate_model(vgg19)
         
 #-- End of if __name__ -------------------------------------------------------
 
