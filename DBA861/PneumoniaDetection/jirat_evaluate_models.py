@@ -74,8 +74,8 @@ if __name__ == "__main__":
     # evaluate_model(cnn)
     
     #-- Evaluate VGG19 --
-    # vgg19 = config.MODELS_ROOT+config.VGG19
-    # evaluate_model(vgg19)
+    vgg19 = config.MODELS_ROOT+config.VGG19
+    evaluate_model(vgg19)
 
     #-- Evaluate ResNet50 --
     resnet50 = config.MODELS_ROOT+config.RESNET50

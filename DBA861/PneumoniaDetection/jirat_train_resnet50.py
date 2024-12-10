@@ -13,6 +13,8 @@ from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import time
+
+import config
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
@@ -58,21 +60,21 @@ if __name__ == "__main__":
 
     # Load training and validation data
     train_generator = train_datagen.flow_from_directory(
-        'D:\projects\GGU\data\chest_xray/train',
+        config.DATA_ROOT+config.TRAINING_FOLDER,
         target_size=(224, 224),
         batch_size=batch_size,
         class_mode='categorical'
     )
 
     val_generator = val_datagen.flow_from_directory(
-        'D:\projects\GGU\data\chest_xray/val',
+        config.DATA_ROOT+config.VALIDATION_FOLDER,
         target_size=(224, 224),
         batch_size=batch_size,
         class_mode='categorical'
     )
 
     test_generator = val_datagen.flow_from_directory(
-        'D:\projects\GGU\data\chest_xray/val',
+        config.DATA_ROOT+config.TEST_FOLDER,
         target_size=(224, 224),
         batch_size=batch_size,
         class_mode='categorical'
@@ -106,7 +108,7 @@ if __name__ == "__main__":
     )
 
     # Save the trained model
-    model.save(f"./models/chest_xray_model_resnet50.h5")
+    model.save(config.MODELS_ROOT+config.VGG19)
 
     # Evaluate the model
     test_loss, test_accuracy = model.evaluate(test_generator)
