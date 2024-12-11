@@ -74,16 +74,25 @@ if __name__ == "__main__":
     # evaluate_model(cnn)
     
     #-- Evaluate VGG19 --
+    print("------------------------------------------------------------")
+    print(f"Evaluating {config.VGG19}")
     vgg19 = config.MODELS_ROOT+config.VGG19
     evaluate_model(vgg19)
+    print("============================================================")
 
+    print("------------------------------------------------------------")
     #-- Evaluate ResNet50 --
-    resnet50 = config.MODELS_ROOT+config.RESNET50
-    evaluate_model(resnet50)
+    print(f"Evaluating {config.RESNET50}")
+    # resnet50 = config.MODELS_ROOT+config.RESNET50
+    # evaluate_model(resnet50)
+    print("============================================================")
 
+    print("------------------------------------------------------------")
     #-- Evaluate ResNet50V2 --
-    resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
-    evaluate_model(resnet50V2)
+    print(f"Evaluating {config.RESNET50V2}")
+    # resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
+    # evaluate_model(resnet50V2)
+    print("============================================================")
         
 #-- End of if __name__ -------------------------------------------------------
 
