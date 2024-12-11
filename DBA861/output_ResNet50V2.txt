@@ -1,0 +1,50 @@
+Found 5216 images belonging to 2 classes.
+Found 16 images belonging to 2 classes.
+Found 624 images belonging to 2 classes.
+Epoch 1/10
+163/163 [==============================] - 205s 1s/step - loss: 0.3103 - accuracy: 0.9158
+Epoch 2/10
+163/163 [==============================] - 199s 1s/step - loss: 0.1325 - accuracy: 0.9465
+Epoch 3/10
+163/163 [==============================] - 203s 1s/step - loss: 0.1154 - accuracy: 0.9561
+Epoch 4/10
+163/163 [==============================] - 201s 1s/step - loss: 0.1016 - accuracy: 0.9603
+Epoch 5/10
+163/163 [==============================] - 202s 1s/step - loss: 0.1106 - accuracy: 0.9586
+Epoch 6/10
+163/163 [==============================] - 200s 1s/step - loss: 0.0943 - accuracy: 0.9651
+Epoch 7/10
+163/163 [==============================] - 200s 1s/step - loss: 0.0938 - accuracy: 0.9664
+Epoch 8/10
+163/163 [==============================] - 202s 1s/step - loss: 0.0918 - accuracy: 0.9668
+Epoch 9/10
+163/163 [==============================] - 201s 1s/step - loss: 0.0830 - accuracy: 0.9672
+Epoch 10/10
+163/163 [==============================] - 200s 1s/step - loss: 0.0908 - accuracy: 0.9664
+Epoch 1/10
+163/163 [==============================] - 811s 5s/step - loss: 0.1784 - accuracy: 0.9346
+Epoch 2/10
+163/163 [==============================] - 796s 5s/step - loss: 0.1032 - accuracy: 0.9580
+Epoch 3/10
+163/163 [==============================] - 800s 5s/step - loss: 0.0721 - accuracy: 0.9739
+Epoch 4/10
+163/163 [==============================] - 799s 5s/step - loss: 0.0631 - accuracy: 0.9770
+Epoch 5/10
+163/163 [==============================] - 798s 5s/step - loss: 0.0550 - accuracy: 0.9799
+Epoch 6/10
+163/163 [==============================] - 801s 5s/step - loss: 0.0575 - accuracy: 0.9803
+Epoch 7/10
+163/163 [==============================] - 815s 5s/step - loss: 0.0455 - accuracy: 0.9845
+Epoch 8/10
+163/163 [==============================] - 810s 5s/step - loss: 0.0442 - accuracy: 0.9835
+Epoch 9/10
+163/163 [==============================] - 883s 5s/step - loss: 0.0373 - accuracy: 0.9862
+Epoch 10/10
+163/163 [==============================] - 875s 5s/step - loss: 0.0331 - accuracy: 0.9889
+c:\ProgramData\Anaconda3\lib\site-packages\keras\src\engine\training.py:3000: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.  
+  saving_api.save_model(
+20/20 [==============================] - 24s 1s/step - loss: 0.3297 - accuracy: 0.9071
+
+Test Loss: 0.3297
+Test Accuracy: 90.71%
+----- Time elapsed: 10231.30 seconds -----

@@ -13,6 +13,7 @@ from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import time
+from datetime import timedelta
 
 import config
 #-----------------------------------------------------------------------------
@@ -108,7 +109,7 @@ if __name__ == "__main__":
     )
 
     # Save the trained model
-    model.save(config.MODELS_ROOT+config.VGG19)
+    model.save(config.MODELS_ROOT+config.RESNET50)
 
     # Evaluate the model
     test_loss, test_accuracy = model.evaluate(test_generator)
@@ -122,7 +123,7 @@ if __name__ == "__main__":
     elapsed_time = end_time - start_time
 
     # Log the time elapsed
-    print(f"----- Time elapsed: {elapsed_time:.2f} seconds -----")
+    print(f"----- Time elapsed: {str(timedelta(seconds=elapsed_time))} -----")
 
 #-- End of if __name__ -------------------------------------------------------
 

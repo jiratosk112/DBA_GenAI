@@ -32,7 +32,7 @@ def evaluate_model(model_path):
         test_datagen = ImageDataGenerator(rescale=1.0/255)  # Rescale pixel values to [0, 1]
 
         test_generator = test_datagen.flow_from_directory(
-            '../../data/chest_xray/test',  # Replace with the directory of the test dataset
+            config.DATA_ROOT+config.TEST_FOLDER,  # Replace with the directory of the test dataset
             target_size=(224, 224),  # Resize images to match model input
             batch_size=32,  # Batch size for evaluation
             class_mode='categorical',  # Multi-class labels (categorical format)
@@ -80,18 +80,18 @@ if __name__ == "__main__":
     evaluate_model(vgg19)
     print("============================================================")
 
-    print("------------------------------------------------------------")
     #-- Evaluate ResNet50 --
+    print("------------------------------------------------------------")
     print(f"Evaluating {config.RESNET50}")
-    # resnet50 = config.MODELS_ROOT+config.RESNET50
-    # evaluate_model(resnet50)
+    resnet50 = config.MODELS_ROOT+config.RESNET50
+    evaluate_model(resnet50)
     print("============================================================")
 
-    print("------------------------------------------------------------")
     #-- Evaluate ResNet50V2 --
+    print("------------------------------------------------------------")
     print(f"Evaluating {config.RESNET50V2}")
-    # resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
-    # evaluate_model(resnet50V2)
+    resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
+    evaluate_model(resnet50V2)
     print("============================================================")
         
 #-- End of if __name__ -------------------------------------------------------
