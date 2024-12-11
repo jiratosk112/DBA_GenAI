@@ -1,3 +1,25 @@
+[Evaluation]
+Model: [D:/projects/GGU/DBA_GENAI/DBA861/PneumoniaDetection/models/pneumonia_detector_resnet50V2.h5]
+Test Loss: 0.3297
+Test Accuracy: 90.71%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      NORMAL       0.95      0.79      0.87       234
+   PNEUMONIA       0.89      0.97      0.93       390
+
+    accuracy                           0.91       624
+   macro avg       0.92      0.88      0.90       624
+weighted avg       0.91      0.91      0.91       624
+
+
+Confusion Matrix:
+[[186  48]
+ [ 10 380]]
+============================================================
+
+[Training]
 Found 5216 images belonging to 2 classes.
 Found 16 images belonging to 2 classes.
 Found 624 images belonging to 2 classes.
