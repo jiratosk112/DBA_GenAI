@@ -1,0 +1,23 @@
+[Evaluation]
+Model: [C:/projects/GGU/DBA_GENAI/DBA861/PneumoniaDetection/models/pneumonia_detector_vgg19.h5]
+Test Loss: 0.4776
+Test Accuracy: 90.59%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      NORMAL       0.99      0.76      0.86       226
+   PNEUMONIA       0.87      0.99      0.93       380
+
+    accuracy                           0.91       606
+   macro avg       0.93      0.88      0.89       606
+weighted avg       0.92      0.91      0.90       606
+
+
+Confusion Matrix:
+[[171  55]
+ [  2 378]]
+============================================================
+
+
+[Training]
