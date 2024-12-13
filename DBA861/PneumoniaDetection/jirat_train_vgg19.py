@@ -30,7 +30,7 @@ if __name__ == "__main__":
     num_classes = 2  # Normal and Pneumonia
     batch_size = 32
 
-    # Load the pre-trained ResNet50 model without the top layer
+    # Load the pre-trained VGG19 model without the top layer
     base_model = VGG19(weights='imagenet', include_top=False, input_shape=input_shape)
 
     # Freeze the convolutional base
