@@ -73,7 +73,7 @@ if __name__ == "__main__":
     # cnn = config.MODELS_ROOT+config.CNN
     # evaluate_model(cnn)
     
-    #-- Evaluate VGG19 --
+    #-- Evaluate CNN --
     print("------------------------------------------------------------")
     print(f"Evaluating {config.CNN}")
     cnn = config.MODELS_ROOT+config.CNN
