@@ -1,5 +1,5 @@
 #*****************************************************************************
-# Filename: jirat_train_resnet50.py
+# Filename: jirat_train_resnet50V2.py
 # Author: Jirat Boomuang
 # Email: jirat_boomuang@sloan.mit.edu
 # Description: For pneumonia detecter using ResNet50V2

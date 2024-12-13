@@ -1,5 +1,5 @@
 #*****************************************************************************
-# Filename: jirat_train_resnet50.py
+# Filename: jirat_train_vgg19.py
 # Author: Jirat Boomuang
 # Email: jirat_boomuang@sloan.mit.edu
 # Description: For pneumonia detecter using VGG19
