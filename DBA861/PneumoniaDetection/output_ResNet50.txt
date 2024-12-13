@@ -1,0 +1,94 @@
+[Evaluation]
+Model: [D:/projects/GGU/DBA_GENAI/DBA861/PneumoniaDetection/models/pneumonia_detector_resnet50.h5]
+Test Loss: 2.5950
+Test Accuracy: 85.10%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      NORMAL       0.99      0.61      0.75       234
+   PNEUMONIA       0.81      0.99      0.89       390
+
+    accuracy                           0.85       624
+   macro avg       0.90      0.80      0.82       624
+weighted avg       0.88      0.85      0.84       624
+
+
+Confusion Matrix:
+[[143  91]
+ [  2 388]]
+
+============================================================
+
+[Training]
+Found 5216 images belonging to 2 classes.
+Found 16 images belonging to 2 classes.
+Found 624 images belonging to 2 classes.
+Epoch 1/10
+163/163 [==============================] - 428s 3s/step - loss: 0.6070 - accuracy: 0.7322
+Epoch 2/10
+163/163 [==============================] - 424s 3s/step - loss: 0.4431 - accuracy: 0.7887
+Epoch 3/10
+163/163 [==============================] - 421s 3s/step - loss: 0.4168 - accuracy: 0.8033
+Epoch 4/10
+163/163 [==============================] - 418s 3s/step - loss: 0.3781 - accuracy: 0.8255
+Epoch 5/10
+163/163 [==============================] - 403s 2s/step - loss: 0.3527 - accuracy: 0.8390
+Epoch 6/10
+163/163 [==============================] - 402s 2s/step - loss: 0.3516 - accuracy: 0.8418
+Epoch 7/10
+163/163 [==============================] - 415s 3s/step - loss: 0.3165 - accuracy: 0.8633
+Epoch 8/10
+163/163 [==============================] - 415s 3s/step - loss: 0.3076 - accuracy: 0.8668
+Epoch 9/10
+163/163 [==============================] - 413s 3s/step - loss: 0.3162 - accuracy: 0.8610
+Epoch 10/10
+163/163 [==============================] - 393s 2s/step - loss: 0.2842 - accuracy: 0.8737
+Epoch 1/10
+163/163 [==============================] - 1686s 10s/step - loss: 1.4699 - accuracy: 0.9055
+Epoch 2/10
+163/163 [==============================] - 1675s 10s/step - loss: 0.2669 - accuracy: 0.9442
+Epoch 3/10
+163/163 [==============================] - 1673s 10s/step - loss: 0.1666 - accuracy: 0.9517
+Epoch 4/10
+Epoch 3/10
+163/163 [==============================] - 1673s 10s/step - loss: 0.1666 - accuracy: 0.9517
+Epoch 4/10
+163/163 [==============================] - 1673s 10s/step - loss: 0.1666 - accuracy: 0.9517
+Epoch 4/10
+163/163 [==============================] - 1669s 10s/step - loss: 0.1159 - accuracy: 0.9613
+163/163 [==============================] - 1669s 10s/step - loss: 0.1159 - accuracy: 0.9613
+Epoch 5/10
+163/163 [==============================] - 1658s 10s/step - loss: 0.1093 - accuracy: 0.9651
+Epoch 5/10
+163/163 [==============================] - 1658s 10s/step - loss: 0.1093 - accuracy: 0.9651
+Epoch 6/10
+163/163 [==============================] - 1658s 10s/step - loss: 0.1093 - accuracy: 0.9651
+Epoch 6/10
+Epoch 6/10
+163/163 [==============================] - 1670s 10s/step - loss: 0.0770 - accuracy: 0.9712
+Epoch 7/10
+163/163 [==============================] - 1670s 10s/step - loss: 0.0770 - accuracy: 0.9712
+Epoch 7/10
+163/163 [==============================] - 1675s 10s/step - loss: 0.0865 - accuracy: 0.9714
+Epoch 7/10
+163/163 [==============================] - 1675s 10s/step - loss: 0.0865 - accuracy: 0.9714
+163/163 [==============================] - 1675s 10s/step - loss: 0.0865 - accuracy: 0.9714
+Epoch 8/10
+163/163 [==============================] - 1744s 11s/step - loss: 0.0652 - accuracy: 0.9753
+Epoch 8/10
+163/163 [==============================] - 1744s 11s/step - loss: 0.0652 - accuracy: 0.9753
+Epoch 9/10
+163/163 [==============================] - 1744s 11s/step - loss: 0.0652 - accuracy: 0.9753
+Epoch 9/10
+Epoch 9/10
+163/163 [==============================] - 1809s 11s/step - loss: 0.0658 - accuracy: 0.9741
+Epoch 10/10
+163/163 [==============================] - 1782s 11s/step - loss: 0.0592 - accuracy: 0.9772
+C:\ProgramData\Anaconda3\lib\site-packages\keras\src\engine\training.py:3000: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+20/20 [==============================] - 30s 1s/step - loss: 2.5950 - accuracy: 0.8510
+
+Test Loss: 2.5950
+Test Accuracy: 85.10%
+----- Time elapsed: 5:53:56.824472 -----

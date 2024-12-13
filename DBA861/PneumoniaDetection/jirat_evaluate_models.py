@@ -75,24 +75,31 @@ if __name__ == "__main__":
     
     #-- Evaluate VGG19 --
     print("------------------------------------------------------------")
-    print(f"Evaluating {config.VGG19}")
-    vgg19 = config.MODELS_ROOT+config.VGG19
-    evaluate_model(vgg19)
+    print(f"Evaluating {config.CNN}")
+    cnn = config.MODELS_ROOT+config.CNN
+    evaluate_model(cnn)
     print("============================================================")
 
-    #-- Evaluate ResNet50 --
-    print("------------------------------------------------------------")
-    print(f"Evaluating {config.RESNET50}")
-    resnet50 = config.MODELS_ROOT+config.RESNET50
-    evaluate_model(resnet50)
-    print("============================================================")
+    # #-- Evaluate VGG19 --
+    # print("------------------------------------------------------------")
+    # print(f"Evaluating {config.VGG19}")
+    # vgg19 = config.MODELS_ROOT+config.VGG19
+    # evaluate_model(vgg19)
+    # print("============================================================")
 
-    #-- Evaluate ResNet50V2 --
-    print("------------------------------------------------------------")
-    print(f"Evaluating {config.RESNET50V2}")
-    resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
-    evaluate_model(resnet50V2)
-    print("============================================================")
+    # #-- Evaluate ResNet50 --
+    # print("------------------------------------------------------------")
+    # print(f"Evaluating {config.RESNET50}")
+    # resnet50 = config.MODELS_ROOT+config.RESNET50
+    # evaluate_model(resnet50)
+    # print("============================================================")
+
+    # #-- Evaluate ResNet50V2 --
+    # print("------------------------------------------------------------")
+    # print(f"Evaluating {config.RESNET50V2}")
+    # resnet50V2 = config.MODELS_ROOT+config.RESNET50V2
+    # evaluate_model(resnet50V2)
+    # print("============================================================")
         
 #-- End of if __name__ -------------------------------------------------------
 

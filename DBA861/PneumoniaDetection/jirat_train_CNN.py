@@ -1,16 +1,17 @@
 #*****************************************************************************
-# Filename: jirat_train_resnet50.py
+# Filename: jirat_train_cnn.py
 # Author: Jirat Boomuang
 # Email: jirat_boomuang@sloan.mit.edu
-# Description: For pneumonia detecter using VGG19
+# Description: For pneumonia detecter using non-transfer learning CNN
 #*****************************************************************************
 
 #-- Import Libraries ---------------------------------------------------------
 import tensorflow as tf
-from tensorflow.keras.applications import VGG19
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.callbacks import EarlyStopping
 
 import time
 from datetime import timedelta
@@ -27,31 +28,28 @@ if __name__ == "__main__":
 
     # Set parameters
     input_shape = (224, 224, 3)  # Resize chest X-ray images to 224x224
-    num_classes = 2  # Normal and Pneumonia
     batch_size = 32
 
-    # Load the pre-trained ResNet50 model without the top layer
-    base_model = VGG19(weights='imagenet', include_top=False, input_shape=input_shape)
-
-    # Freeze the convolutional base
-    for layer in base_model.layers:
-        layer.trainable = False
-
-    # Add custom layers on top
-    x = base_model.output
-    x = GlobalAveragePooling2D()(x)
-    x = Dense(1024, activation='relu')(x)
-    predictions = Dense(num_classes, activation='softmax')(x)
-
-    # Create the new model
-    model = Model(inputs=base_model.input, outputs=predictions)
+    # Define a simple CNN
+    model = Sequential([
+        Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
+        MaxPooling2D(pool_size=(2, 2)),
+        Conv2D(64, (3, 3), activation='relu'),
+        MaxPooling2D(pool_size=(2, 2)),
+        Flatten(),
+        Dense(128, activation='relu'),
+        Dense(2, activation='softmax')  # Assuming 2 classes: Normal and Pneumonia
+    ])
 
     # Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Prepare data generators for training and validation
+    # Data augmentation and preprocessing
     train_datagen = ImageDataGenerator(
         rescale=1.0/255,
+        rotation_range=20,
+        width_shift_range=0.2,
+        height_shift_range=0.2,
         shear_range=0.2,
         zoom_range=0.2,
         horizontal_flip=True
@@ -81,35 +79,19 @@ if __name__ == "__main__":
         class_mode='categorical'
     )
 
+    # Set up an early stopping callback
+    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+
     # Train the model
-    model.fit(
+    history = model.fit(
         train_generator,
-        steps_per_epoch=train_generator.samples // batch_size,
+        epochs=10,
         validation_data=val_generator,
-        validation_steps=val_generator.samples // batch_size,
-        epochs=10
-    )
-
-    # Fine-tune the model
-    for layer in base_model.layers:
-        layer.trainable = True  # Unfreeze all layers for fine-tuning
-
-    # Recompile the model with a lower learning rate
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-5),
-                loss='categorical_crossentropy',
-                metrics=['accuracy'])
-
-    # Continue training
-    model.fit(
-        train_generator,
-        steps_per_epoch=train_generator.samples // batch_size,
-        validation_data=val_generator,
-        validation_steps=val_generator.samples // batch_size,
-        epochs=10
+        callbacks=[early_stopping]
     )
 
     # Save the trained model
-    model.save(config.MODELS_ROOT+config.VGG19)
+    model.save(config.MODELS_ROOT+config.CNN)
 
     # Evaluate the model
     test_loss, test_accuracy = model.evaluate(test_generator)
