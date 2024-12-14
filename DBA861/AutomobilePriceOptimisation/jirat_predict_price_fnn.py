@@ -64,7 +64,7 @@ if __name__ == "__main__":
     print("\n-------------------------------------------------------------")
     
     # Load test data and preprocessor
-    X_test = joblib.load(config.MODELS_ROOT + config.X_TEST_FNN)  # Assuming pre-saved test data
+    X_test = joblib.load(config.MODELS_ROOT + config.X_TEST_FNN)
     y_test = joblib.load(config.MODELS_ROOT + config.Y_TEST_FNN)
     preprocessor = joblib.load(config.MODELS_ROOT + config.PREPROCESSOR_FNN)
     
