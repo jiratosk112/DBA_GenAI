@@ -60,8 +60,8 @@ def predict_optimal_price(model, preprocessor, new_car_features):
 if __name__ == "__main__":
     # Evaluate FNN models
     print("\n-------------------------------------------------------------")
-    print(f"\nEvaluate {config.FNN}")
-    print("\n-------------------------------------------------------------")
+    print(f"Evaluate {config.FNN}")
+    print("-------------------------------------------------------------")
     
     # Load test data and preprocessor
     X_test = joblib.load(config.MODELS_ROOT + config.X_TEST_FNN)

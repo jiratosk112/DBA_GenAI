@@ -28,8 +28,8 @@ import config
 #----------------------------------------------------------------------------- 
 if __name__ == "__main__":
     print("\n-------------------------------------------------------------")
-    print(f"\nTrain FNN Model: {config.FNN}")
-    print("\n-------------------------------------------------------------")
+    print(f"Train FNN Model: {config.FNN}")
+    print("-------------------------------------------------------------")
     
     # Load data
     data = pd.read_csv(config.DATA_FILE)  # Load the dataset from the configured file path
