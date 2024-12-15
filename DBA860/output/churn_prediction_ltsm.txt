@@ -1,0 +1,115 @@
+------------------------------------------------------------
+Churn Prediction - Model Training
+------------------------------------------------------------
+Epoch 1/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 10s 17ms/step - accuracy: 0.7215 - auc: 0.7113 - loss: 0.6023 - val_accuracy: 0.8030 - val_auc: 0.8291 - val_loss: 0.4278 - learning_rate: 0.0010
+Epoch 2/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.7832 - auc: 0.8227 - loss: 0.4481 - val_accuracy: 0.8039 - val_auc: 0.8393 - val_loss: 0.4193 - learning_rate: 0.0010
+Epoch 3/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 2s 11ms/step - accuracy: 0.7853 - auc: 0.8243 - loss: 0.4444 - val_accuracy: 0.8039 - val_auc: 0.8396 - val_loss: 0.4203 - learning_rate: 0.0010
+Epoch 4/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.7820 - auc: 0.8205 - loss: 0.4465 - val_accuracy: 0.8004 - val_auc: 0.8416 - val_loss: 0.4090 - learning_rate: 0.0010
+Epoch 5/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 3s 11ms/step - accuracy: 0.7824 - auc: 0.8153 - loss: 0.4623 - val_accuracy: 0.8021 - val_auc: 0.8412 - val_loss: 0.4110 - learning_rate: 0.0010
+Epoch 6/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.7892 - auc: 0.8391 - loss: 0.4277 - val_accuracy: 0.7950 - val_auc: 0.8447 - val_loss: 0.4331 - learning_rate: 0.0010
+Epoch 7/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.8027 - auc: 0.8421 - loss: 0.4281 - val_accuracy: 0.8021 - val_auc: 0.8426 - val_loss: 0.4065 - learning_rate: 0.0010
+Epoch 8/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.7977 - auc: 0.8428 - loss: 0.4269 - val_accuracy: 0.8039 - val_auc: 0.8410 - val_loss: 0.4148 - learning_rate: 0.0010
+Epoch 9/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.8024 - auc: 0.8516 - loss: 0.4153 - val_accuracy: 0.7977 - val_auc: 0.8424 - val_loss: 0.4092 - learning_rate: 0.0010
+Epoch 10/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 10ms/step - accuracy: 0.7980 - auc: 0.8401 - loss: 0.4249 - val_accuracy: 0.8048 - val_auc: 0.8406 - val_loss: 0.4132 - learning_rate: 0.0010
+Epoch 11/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.8091 - auc: 0.8477 - loss: 0.4144 - val_accuracy: 0.7968 - val_auc: 0.8370 - val_loss: 0.4133 - learning_rate: 0.0010
+Epoch 12/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 10ms/step - accuracy: 0.8001 - auc: 0.8540 - loss: 0.4108 - val_accuracy: 0.7924 - val_auc: 0.8409 - val_loss: 0.4083 - learning_rate: 5.0000e-04
+45/45 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step  
+
+****************************************
+Loss: 0.40492287278175354
+Accuracy: 0.8019872307777405
+Precision: 0.6506410256410257
+Recall: 0.5442359249329759
+F1 Score: 0.5927007299270073
+AUC: 0.85655677318573
+Confusion Matrix:
+[[927 109]
+ [170 203]]
+****************************************
+Feature Coefficients:
+SeniorCitizen: -0.1119
+tenure: 0.0237
+MonthlyCharges: -0.1160
+TotalCharges: 0.0898
+gender_Male: -0.0558
+Partner_Yes: 0.0063
+Dependents_Yes: -0.1491
+PhoneService_Yes: -0.0599
+MultipleLines_No phone service: 0.1221
+MultipleLines_Yes: -0.0138
+InternetService_Fiber optic: -0.0966
+InternetService_No: 0.1114
+OnlineSecurity_No internet service: 0.1078
+OnlineSecurity_Yes: -0.1016
+OnlineBackup_No internet service: 0.1101
+OnlineBackup_Yes: 0.1904
+DeviceProtection_No internet service: -0.0479
+DeviceProtection_Yes: -0.1386
+TechSupport_No internet service: -0.0140
+TechSupport_Yes: 0.0683
+StreamingTV_No internet service: -0.0815
+StreamingTV_Yes: -0.1683
+StreamingMovies_No internet service: 0.1045
+StreamingMovies_Yes: -0.0886
+Contract_One year: -0.0324
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+TechSupport_Yes: 0.0683
+StreamingTV_No internet service: -0.0815
+StreamingTV_Yes: -0.1683
+StreamingMovies_No internet service: 0.1045
+StreamingMovies_Yes: -0.0886
+Contract_One year: -0.0324
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+PaymentMethod_Credit card (automatic): -0.1556
+PaymentMethod_Electronic check: -0.0840
+PaymentMethod_Mailed check: 0.1122
+Final Training Accuracy: 0.8056
+Final Training Loss: 0.4094
+TechSupport_Yes: 0.0683
+StreamingTV_No internet service: -0.0815
+StreamingTV_Yes: -0.1683
+StreamingMovies_No internet service: 0.1045
+StreamingMovies_Yes: -0.0886
+Contract_One year: -0.0324
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+PaymentMethod_Credit card (automatic): -0.1556
+PaymentMethod_Electronic check: -0.0840
+TechSupport_Yes: 0.0683
+StreamingTV_No internet service: -0.0815
+StreamingTV_Yes: -0.1683
+StreamingMovies_No internet service: 0.1045
+StreamingMovies_Yes: -0.0886
+Contract_One year: -0.0324
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+StreamingMovies_No internet service: 0.1045
+StreamingMovies_Yes: -0.0886
+Contract_One year: -0.0324
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+Contract_Two year: 0.1527
+PaperlessBilling_Yes: -0.0767
+PaymentMethod_Credit card (automatic): -0.1556
+PaperlessBilling_Yes: -0.0767
+PaymentMethod_Credit card (automatic): -0.1556
+PaymentMethod_Credit card (automatic): -0.1556
+PaymentMethod_Electronic check: -0.0840
+PaymentMethod_Mailed check: 0.1122
+Final Training Accuracy: 0.8056
+Final Training Loss: 0.4094
+------------------------------------------------------------

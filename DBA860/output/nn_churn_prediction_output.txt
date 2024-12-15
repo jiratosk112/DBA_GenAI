@@ -1,0 +1,43 @@
+------------------------------------------------------------
+Churn Prediction - Model Training
+------------------------------------------------------------
+c:\Users\jirat\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\core\dense.py:87: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2024-12-15 15:01:31.318224: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 5s 8ms/step - accuracy: 0.6290 - auc: 0.6764 - loss: 0.7287 - val_accuracy: 0.8066 - val_auc: 0.8273 - val_loss: 0.4655 - learning_rate: 0.0010
+Epoch 2/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7526 - auc: 0.7721 - loss: 0.5305 - val_accuracy: 0.8012 - val_auc: 0.8375 - val_loss: 0.4338 - learning_rate: 0.0010
+Epoch 3/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 5ms/step - accuracy: 0.7806 - auc: 0.7969 - loss: 0.4803 - val_accuracy: 0.8075 - val_auc: 0.8403 - val_loss: 0.4105 - learning_rate: 0.0010
+Epoch 4/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.7809 - auc: 0.8153 - loss: 0.4611 - val_accuracy: 0.8021 - val_auc: 0.8390 - val_loss: 0.4123 - learning_rate: 0.0010
+Epoch 5/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7853 - auc: 0.8179 - loss: 0.4542 - val_accuracy: 0.8066 - val_auc: 0.8401 - val_loss: 0.4106 - learning_rate: 0.0010
+Epoch 6/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.7824 - auc: 0.8147 - loss: 0.4601 - val_accuracy: 0.8110 - val_auc: 0.8424 - val_loss: 0.4079 - learning_rate: 0.0010
+Epoch 7/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7856 - auc: 0.8214 - loss: 0.4474 - val_accuracy: 0.8057 - val_auc: 0.8377 - val_loss: 0.4116 - learning_rate: 0.0010
+Epoch 8/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.7891 - auc: 0.8281 - loss: 0.4406 - val_accuracy: 0.8012 - val_auc: 0.8401 - val_loss: 0.4093 - learning_rate: 0.0010
+Epoch 9/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7957 - auc: 0.8420 - loss: 0.4237 - val_accuracy: 0.8075 - val_auc: 0.8391 - val_loss: 0.4095 - learning_rate: 0.0010
+Epoch 10/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7932 - auc: 0.8368 - loss: 0.4299 - val_accuracy: 0.8057 - val_auc: 0.8411 - val_loss: 0.4083 - learning_rate: 0.0010
+Epoch 11/50
+141/141 ━━━━━━━━━━━━━━━━━━━━ 1s 5ms/step - accuracy: 0.7988 - auc: 0.8413 - loss: 0.4250 - val_accuracy: 0.8030 - val_auc: 0.8401 - val_loss: 0.4097 - learning_rate: 0.0010
+45/45 ━━━━━━━━━━━━━━━━━━━━ 0s 4ms/step  
+
+****************************************
+Loss: 0.40124568343162537
+Accuracy: 0.8076649904251099
+Precision: 0.659375
+Recall: 0.5656836461126006
+F1 Score: 0.608946608946609
+AUC: 0.8593230247497559
+Confusion Matrix:
+[[927 109]
+ [162 211]]
+****************************************
+------------------------------------------------------------

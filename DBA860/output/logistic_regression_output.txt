@@ -1,0 +1,49 @@
+------------------------------------------------------------
+Churn Prediction - Model Training
+------------------------------------------------------------
+
+*******************************************************
+                                  Feature  Coefficient
+10            InternetService_Fiber optic     0.996274
+3                            TotalCharges     0.632380
+23                    StreamingMovies_Yes     0.369207
+26                   PaperlessBilling_Yes     0.334119
+28         PaymentMethod_Electronic check     0.322880
+9                       MultipleLines_Yes     0.290955
+21                        StreamingTV_Yes     0.267507
+8          MultipleLines_No phone service     0.218856
+0                           SeniorCitizen     0.160848
+5                             Partner_Yes     0.053963
+17                   DeviceProtection_Yes     0.008280
+29             PaymentMethod_Mailed check    -0.031658
+4                             gender_Male    -0.051078
+27  PaymentMethod_Credit card (automatic)    -0.086480
+15                       OnlineBackup_Yes    -0.142668
+18        TechSupport_No internet service    -0.148535
+22    StreamingMovies_No internet service    -0.148535
+20        StreamingTV_No internet service    -0.148535
+12     OnlineSecurity_No internet service    -0.148535
+11                     InternetService_No    -0.148535
+16   DeviceProtection_No internet service    -0.148535
+14       OnlineBackup_No internet service    -0.148535
+6                          Dependents_Yes    -0.161835
+7                        PhoneService_Yes    -0.212436
+19                        TechSupport_Yes    -0.319822
+2                          MonthlyCharges    -0.323716
+13                     OnlineSecurity_Yes    -0.400723
+24                      Contract_One year    -0.639501
+1                                  tenure    -1.343928
+25                      Contract_Two year    -1.402997
+*******************************************************
+
+****************************************
+Accuracy: 0.8211497515968772
+Precision: 0.6861538461538461
+Recall: 0.5978552278820375
+F1 Score: 0.6389684813753581
+ROC AUC: 0.8621722545985281
+Confusion Matrix:
+[[934 102]
+ [150 223]]
+****************************************
+------------------------------------------------------------

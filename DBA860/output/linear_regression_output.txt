@@ -1,0 +1,44 @@
+------------------------------------------------------------
+TotalCharges Prediction - Model Training
+------------------------------------------------------------
+
+*******************************************************
+                                  Feature  Coefficient
+1                                  tenure  1480.330659
+2                          MonthlyCharges   812.227541
+14                       OnlineBackup_Yes   298.444365
+12                     OnlineSecurity_Yes   240.858515
+16                   DeviceProtection_Yes   233.759317
+18                        TechSupport_Yes   228.781711
+9             InternetService_Fiber optic   215.751202
+28             PaymentMethod_Mailed check   213.285636
+22                    StreamingMovies_Yes   184.105614
+20                        StreamingTV_Yes   169.095486
+8                       MultipleLines_Yes   129.139426
+11     OnlineSecurity_No internet service    35.669678
+10                     InternetService_No    35.669678
+17        TechSupport_No internet service    35.669678
+19        StreamingTV_No internet service    35.669678
+21    StreamingMovies_No internet service    35.669678
+15   DeviceProtection_No internet service    35.669678
+13       OnlineBackup_No internet service    35.669678
+6                        PhoneService_Yes    33.913609
+4                             Partner_Yes    22.272537
+3                             gender_Male    19.226746
+26  PaymentMethod_Credit card (automatic)    16.000506
+25                   PaperlessBilling_Yes    12.595787
+0                           SeniorCitizen   -11.490419
+23                      Contract_One year   -19.495711
+7          MultipleLines_No phone service   -33.913609
+5                          Dependents_Yes   -43.352456
+27         PaymentMethod_Electronic check   -66.556100
+29                              Churn_Yes  -141.752138
+24                      Contract_Two year  -194.457132
+*******************************************************
+
+****************************************
+Mean Squared Error (MSE): 488684.01849583955
+Mean Absolute Error (MAE): 566.2196750124764
+R-Squared (R2): 0.906010241060222
+****************************************
+------------------------------------------------------------

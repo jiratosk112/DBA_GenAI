@@ -1,4 +1,4 @@
 [DBA860]
-- This folder contain all projects and assignments from DBA862.
-- The API Key(s) are in config.py which is ignored by Git.
-- You have to create your own config.py.
+- This folder contain all projects and assignments from DBA860.
+- File path and file names can be found in config.py.
+
